@@ -18,6 +18,10 @@ export const headerData = {
       text: 'Depoimentos',
       href: getPermalink('/#testimonials'),
     },
+    {
+      text: 'Perguntas Frequentes',
+      href: getPermalink('/#faq'),
+    },
   ],
   actions: [{ text: 'Entrar em contato', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };

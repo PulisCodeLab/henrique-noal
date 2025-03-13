@@ -9,6 +9,7 @@ import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
@@ -214,30 +215,32 @@ const metadata = {
 
   <!-- Steps Widget ****************** -->
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="O processo"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'Passo 1: <span class="font-medium">Diagnóstico Inicial</span>',
         description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
+          "Realizamos uma avaliação completa para entender seu ponto de partida e definir metas realistas.",
         icon: 'tabler:package',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
+        title: 'Passo 2: <span class="font-medium">Planejamento Estratégico</span>',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
+          "Desenvolvo seu plano personalizado de treinos e nutrição com base nos seus objetivos e disponibilidade.",
         icon: 'tabler:letter-case',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Passo 3: <span class="font-medium">Implementação e Acompanhamento</span>',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
+          "Iniciamos os treinos com orientação precisa e monitoramento constante de sua evolução.",
         icon: 'tabler:paint',
       },
       {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
+        title: 'Passo 4: <span class="font-medium">Avaliação e Ajustes</span>',
+        description:
+          "A cada 30 dias, realizamos novas medições e ajustamos o programa para maximizar seus resultados.",
+        icon: 'tabler:paint',
+      }
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
@@ -247,60 +250,27 @@ const metadata = {
 
   <!-- Features2 Widget ************** -->
   <Features2
-    title="Most used widgets"
+    title="Etapas da Consultoria"
     subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+    tagline="O processo"
     items={[
       {
-        title: 'Headers',
+        title: 'Análise',
         description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
+        icon: 'flat-color-icons:document',
       },
       {
-        title: 'Heros',
+        title: 'Plano personalizado',
         description:
           "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
         icon: 'flat-color-icons:gallery',
       },
       {
-        title: 'Features',
+        title: 'Materiais complementares',
         description:
           'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
         icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
+      }
     ]}
   >
     <Fragment slot="bg">
@@ -308,9 +278,71 @@ const metadata = {
     </Fragment>
   </Features2>
 
+  <Testimonials
+    title="Client testimonials"
+    subtitle="Discover what clients have to say about their experiences working with me."
+    testimonials={[
+      {
+        testimonial: `She took our vague concept and turned it into a visual masterpiece that perfectly aligned with our goals. Her attention to detail and ability to translate ideas into compelling visuals exceeded our expectations.`,
+        name: 'Mark Thompson',
+        job: 'Creative director',
+        image: {
+          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Mark Thompson Image',
+        },
+      },
+      {
+        testimonial: `She transformed our brand identity with her creative finesse, capturing our essence in every element. Her dedication and talent truly shine through her work.`,
+        name: 'Emily Martinez',
+        job: 'CEO',
+        image: {
+          src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
+          alt: 'Emily Martinez Image',
+        },
+      },
+      {
+        testimonial: `She has an uncanny ability to communicate emotions and stories. She crafted a logo for our NGO that not only represents our cause but also evokes empathy. Her professionalism and commitment make her a designer of exceptional caliber.`,
+        name: 'Laura Simmons',
+        job: 'Founder of an NGO',
+        image: {
+          src: 'https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Laura Simmons Image',
+        },
+      },
+      {
+        testimonial: `We entrusted Sarah with revamping our website's user interface, and the results were astounding. Her intuitive design sense enhanced user experience, leading to a significant increase in engagement. She's a designer who truly understands the synergy of aesthetics and functionality.`,
+        name: 'Alex Foster',
+        job: 'Director of web services',
+        image: {
+          src: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Alex Foster Image',
+        },
+      },
+      {
+        testimonial: `She took our vision and elevated it beyond imagination. Her ability to capture brand essence and translate it into design is nothing short of remarkable. Working with her has been an inspiring journey.`,
+        name: 'Jessica Collins',
+        job: 'Product Manager',
+        image: {
+          src: 'https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=778&q=80',
+          alt: 'Jessica Collins Image',
+        },
+      },
+      {
+        testimonial: `Her ability to transform concepts into captivating visuals is nothing short of extraordinary. She took our event poster idea and turned it into a visual masterpiece that perfectly captured the essence of our festival. Sarah's dedication, creativity, and knack for delivering beyond expectations make her an invaluable asset to any project.`,
+        name: 'Michael Carter',
+        job: 'Event Coordinator',
+        image: {
+          src: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Michael Carter Image',
+        },
+      },
+    ]}
+  />
+
     <!-- Pricing Widget ******************* -->
   <Pricing
     title="Flexible pricing plans"
+    id="pricing"
     prices={[
       {
         title: 'Plano trimestral',
@@ -344,42 +376,38 @@ const metadata = {
     title="Perguntas Frequentes"
     subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
     tagline="FAQs"
+    id="faq"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+        title: 'Nunca treinei antes. A consultoria é para mim?',
+        description: "Sim! Meu trabalho é pensado justamente para quem está começando ou já tentou várias vezes sem sucesso.",
       },
       {
-        title: 'What do I need to start?',
+        title: 'Preciso de academia ou posso treinar em casa?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          ' Os treinos são personalizados para o teu contexto. Se preferires treinar em casa, na academia do prédio ou com materiais que tem em casa, vamos ajustar conforme a estrutura disponível.',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: 'Posso treinar na academia do prédio e na academia do bairro?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          " Sim, precisamos entender qual vai ser a frequência semanal dos treinos e quantas sessões você vai fazer em cada local, a partir disso, preciso conhecer a estrutura de ambos os locais e organizar um treino para que você possa organizar a sua rotina.",
       },
       {
-        title: "What's something that you don't understand?",
+        title: "Como é o suporte?",
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
+          "O acompanhamento é feito de forma online, com ajustes frequentes e contato direto comigo para tirar dúvidas e orientar o processo.",
+      }
     ]}
   />
 
-
+  <div class="flex flex-row flex-nowrap gap-4 py-6 m-auto max-w-xs sm:flex-row sm:justify-center sm:max-w-md lg:justify-center">
+    <div class="flex w-full sm:w-auto">
+      <a class="btn-primary sm:mb-0 w-full" href="https://wa.me/5531999095234?text=Ol%C3%A1,%20tenho%20interesse%20na%20mentoria%20de%20acessibilidade%20digital" rel="noopener noreferrer" target="_blank">
+        Agendar sua avaliação
+      </a>
+    </div>
+  </div>
 
   <!-- CallToAction Widget *********** -->\
   <CallToAction
