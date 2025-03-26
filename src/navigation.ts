@@ -8,7 +8,7 @@ export const headerData = {
     },
     {
       text: 'A Consultoria',
-      href: getPermalink('/#consultancing'),
+      href: getPermalink('/#consultancy'),
     },
     {
       text: 'O Processo',

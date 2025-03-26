@@ -2,78 +2,66 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero2 from '~/components/widgets/Hero2.astro';
-import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import { YouTube } from 'astro-embed';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'Henrique Noal — Consultoria de Treinamento Fisíco',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
   <Hero2
-    tagline="SaaS Web Demo"
+    tagline="Consultoria Personalizada"
     actions={[
-      { variant: 'primary', target: '_blank', text: 'Get Started', href: 'https://github.com/onwidget/astrowind' },
-      { text: 'Learn more', href: '#features' },
+      { variant: 'primary', text: 'Começar agora', href: 'https://wa.me/555599609147?text=Ol%C3%A1, Henrique%20tenho%20interesse%20na%20consultoria%20' },
+      { text: 'Saiba mais', href: '#features' },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'AstroWind Hero Image',
-    }}
   >
     <Fragment slot="title">
-      Simplify web design with Astrowind: <br /> your ultimate <span class="text-accent dark:text-white highlight"
-        >SaaS</span
-      > companion<br />
+      Transforme o Exercício em Hábito com Ciência
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        As a passionate personal trainer, I believe in empowering individuals to achieve their fitness goals through personalized coaching and support. 
+      Treinos personalizados, baseados na ciência, para transformar o exercício em hábito. Sem fórmulas prontas, apenas resultados reais.
+    </Fragment>
+
+    <Fragment slot="image">
+      <YouTube id="WWpZUrqR52c" title="Consultoria Online Personalizada" />
+      <style is:inline>
+        lite-youtube {
+          margin: 0 auto;
+          max-width: 100%;
+        }
+      </style>
     </Fragment>
   </Hero2>
-
-  <!-- Stats Widget ****************** -->
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
-
-  <!-- Note Widget ******************* -->
-  <Note />
 
   <!-- Features Widget *************** -->
   <Features
     id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
+    tagline="Minha abordagem"
+    title="O que eu faço diferente?"
+    subtitle="Eu não entrego apenas um treino, te ensino você a entender o processo, ajustar sua rotina e manter a consistência sem sofrimento."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Personalização Total',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
+          'Seu treino, sua rotina, seu ritmo.',
         icon: 'tabler:brand-tailwind',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Resultados Reais',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+          'Sem fórmulas prontas, apenas o que funciona para você.',
         icon: 'tabler:components',
       },
       {
@@ -83,93 +71,32 @@ const metadata = {
         icon: 'tabler:list-check',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Suporte Contínuo',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+          'Ajustes e acompanhamento direto comigo.',
         icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
+      }
     ]}
   />
 
   <!-- Content Widget **************** -->
   <Content
-    isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
-    items={[
-      {
-        title: 'Built on top of Astro 5.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
-      },
-      {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
-      },
-      {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-  <Content
     isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
+    tagline="Conheça seu treinador"
+    id="about"
     image={{
       src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
       alt: 'Blueprint Image',
     }}
+    callToAction={{
+      text: 'Começar agora',
+      href: 'https://wa.me/555599609147?text=Ol%C3%A1, Henrique%20tenho%20interesse%20na%20consultoria%20',
+    }}
   >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
+    <Fragment slot="title">Quem sou eu?</Fragment>
+    <Fragment slot="content">
+      Sou Henrique Noal, personal trainer formado pela UFSM, com mais de 10 anos de experiência ajudando pessoas a ganharem força, condicionamento e, principalmente, a criarem <strong>consistência</strong> no treino. <br> Também sou criador do SalusCast, um podcast que conecta ciência e saúde, e ofereço consultoria online para quem busca eficiência nos treinos.
+    </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -251,24 +178,30 @@ const metadata = {
   <!-- Features2 Widget ************** -->
   <Features2
     title="Etapas da Consultoria"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
+    subtitle="Diferente dos treinos prontos que não levam a lugar nenhum, meu processo garante um planejamento eficiente, adaptado à sua realidade e que se encaixa na sua rotina."
     tagline="O processo"
     items={[
       {
-        title: 'Análise',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:document',
+        title: 'Análise inicial',
+        description: "Entendo sua rotina, desafios e objetivos",
+        icon: 'flat-color-icons:approval',
       },
       {
         title: 'Plano personalizado',
         description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
+          "Treinos adaptados ao seu nível e tempo disponível",
+          icon: 'flat-color-icons:approval',
       },
       {
-        title: 'Materiais complementares',
+        title: 'Acompanhamento Contínuo',
         description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
+          'Ajustes conforme sua evolução',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Suporte Direto Comigo',
+        description:
+          'Dúvidas e orientações sempre que precisar',
         icon: 'flat-color-icons:approval',
       }
     ]}
@@ -279,93 +212,74 @@ const metadata = {
   </Features2>
 
   <Testimonials
-    title="Client testimonials"
-    subtitle="Discover what clients have to say about their experiences working with me."
+    title="O que dizem"
+    subtitle="Descubra o que meus clientes dizem sobre trabalhar comigo"
     testimonials={[
       {
-        testimonial: `She took our vague concept and turned it into a visual masterpiece that perfectly aligned with our goals. Her attention to detail and ability to translate ideas into compelling visuals exceeded our expectations.`,
+        testimonial: `Sanou as dúvidas e foi muito além! Muito obrigado, sempre trazendo ótimas explicações`,
         name: 'Mark Thompson',
-        job: 'Creative director',
-        image: {
-          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Mark Thompson Image',
-        },
+        job: 'Creative director'
       },
       {
         testimonial: `She transformed our brand identity with her creative finesse, capturing our essence in every element. Her dedication and talent truly shine through her work.`,
         name: 'Emily Martinez',
-        job: 'CEO',
-        image: {
-          src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
-          alt: 'Emily Martinez Image',
-        },
+        job: 'CEO'
       },
       {
         testimonial: `She has an uncanny ability to communicate emotions and stories. She crafted a logo for our NGO that not only represents our cause but also evokes empathy. Her professionalism and commitment make her a designer of exceptional caliber.`,
         name: 'Laura Simmons',
-        job: 'Founder of an NGO',
-        image: {
-          src: 'https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Laura Simmons Image',
-        },
+        job: 'Founder of an NGO'
       },
       {
         testimonial: `We entrusted Sarah with revamping our website's user interface, and the results were astounding. Her intuitive design sense enhanced user experience, leading to a significant increase in engagement. She's a designer who truly understands the synergy of aesthetics and functionality.`,
         name: 'Alex Foster',
-        job: 'Director of web services',
-        image: {
-          src: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Alex Foster Image',
-        },
+        job: 'Director of web services'
       },
       {
         testimonial: `She took our vision and elevated it beyond imagination. Her ability to capture brand essence and translate it into design is nothing short of remarkable. Working with her has been an inspiring journey.`,
         name: 'Jessica Collins',
-        job: 'Product Manager',
-        image: {
-          src: 'https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=778&q=80',
-          alt: 'Jessica Collins Image',
-        },
+        job: 'Product Manager'
       },
       {
         testimonial: `Her ability to transform concepts into captivating visuals is nothing short of extraordinary. She took our event poster idea and turned it into a visual masterpiece that perfectly captured the essence of our festival. Sarah's dedication, creativity, and knack for delivering beyond expectations make her an invaluable asset to any project.`,
         name: 'Michael Carter',
-        job: 'Event Coordinator',
-        image: {
-          src: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Michael Carter Image',
-        },
+        job: 'Event Coordinator'
       },
     ]}
+    callToAction={{
+      text: 'Começar agora',
+      href: 'https://wa.me/555599609147?text=Ol%C3%A1, Henrique%20tenho%20interesse%20na%20consultoria%20',
+    }}
   />
 
     <!-- Pricing Widget ******************* -->
   <Pricing
-    title="Flexible pricing plans"
+    title="Investimento"
+    subtitle='Para garantir resultados reais, ofereço apenas planos trimestrais e semestrais.'
     id="pricing"
     prices={[
       {
         title: 'Plano trimestral',
         subtitle: 'Access to core features and a wide range of templates',
-        price: '0',
-        period: '/ month',
+        price: '240,00',
+        period: 'total R$ 720,00',
         callToAction: {
           target: '_blank',
-          text: 'Get Started for Free',
-          href: '#',
+          text: 'Garantir minha vaga trimestral',
+          href: 'https://wa.me/555599609147?text=Ol%C3%A1, Henrique%20tenho%20interesse%20no%20plano%20trimestral%20',
         },
       },
       {
         title: 'Plano Semestral',
         subtitle: 'Premium templates and advanced customization',
-        price: 220,
-        period: '/ Month',
+        price: '220',
+        period: '6 meses, por R$ 720,00',
         callToAction: {
           target: '_blank',
-          text: 'Upgrade to Pro',
-          href: '#',
+          text: 'Garantir minha vaga semestral',
+          href: 'https://wa.me/555599609147?text=Ol%C3%A1, Henrique%20tenho%20interesse%20no%20plano%20semestral%20',
         },
-        hasRibbon: true,
+        hasRibbon: false,
         ribbonTitle: 'popular',
       }
     ]}
@@ -374,7 +288,7 @@ const metadata = {
   <!-- FAQs Widget ******************* -->
   <FAQs
     title="Perguntas Frequentes"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    subtitle="Pare de perder tempo com treinos que não funcionam"
     tagline="FAQs"
     id="faq"
     classes={{ container: 'max-w-6xl' }}
@@ -403,31 +317,9 @@ const metadata = {
 
   <div class="flex flex-row flex-nowrap gap-4 py-6 m-auto max-w-xs sm:flex-row sm:justify-center sm:max-w-md lg:justify-center">
     <div class="flex w-full sm:w-auto">
-      <a class="btn-primary sm:mb-0 w-full" href="https://wa.me/5531999095234?text=Ol%C3%A1,%20tenho%20interesse%20na%20mentoria%20de%20acessibilidade%20digital" rel="noopener noreferrer" target="_blank">
-        Agendar sua avaliação
+      <a class="btn-primary sm:mb-0 w-full" href="https://wa.me/555599609147?text=Ol%C3%A1, Henrique%20tenho%20interesse%20na%20consultoria%20" rel="noopener noreferrer">
+        Começar agora
       </a>
     </div>
   </div>
-
-  <!-- CallToAction Widget *********** -->\
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
 </Layout>
