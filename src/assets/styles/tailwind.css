@@ -26,11 +26,11 @@
   }
 
   .btn-primary {
-    @apply btn font-semibold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-secondary;
+    @apply btn font-bold bg-primary text-[#1a1a1a] border-primary hover:bg-transparent hover:border-primary hover:text-primary;
   }
 
   .btn-secondary {
-    @apply btn;
+    @apply btn border-white text-white hover:bg-primary hover:text-[#1a1a1a];
   }
 
   .btn-tertiary {

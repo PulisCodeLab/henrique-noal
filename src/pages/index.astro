@@ -22,19 +22,19 @@ const metadata = {
     tagline="Consultoria Personalizada"
     actions={[
       { variant: 'primary', text: 'Começar agora', href: 'https://wa.me/555599609147?text=Ol%C3%A1, Henrique%20tenho%20interesse%20na%20consultoria%20' },
-      { text: 'Saiba mais', href: '#features' },
+      { variant: 'secondary', text: 'Saiba mais', href: '#features' },
     ]}
   >
     <Fragment slot="title">
-      Crie o hábito de se exercitar com base na ciência
+      Transforme sua vida com treinos personalizados
     </Fragment>
 
     <Fragment slot="subtitle">
-      Treinos personalizados e científicos para criar o hábito do exercício. Sem fórmulas prontas, só resultados reais.
+      Te ajudo a criar o hábito do exercício. Sem fórmulas prontas, só resultados reais.
     </Fragment>
 
     <Fragment slot="image">
-      <YouTube id="WWpZUrqR52c" title="Consultoria Online Personalizada" />
+      <YouTube id="WWpZUrqR52c" poster="/poster.png" title="Consultoria Online Personalizada" />
       <style is:inline>
         lite-youtube {
           margin: 0 auto;
@@ -48,14 +48,14 @@ const metadata = {
   <Features
     id="features"
     tagline="Minha abordagem"
-    title="O que eu faço diferente?"
-    subtitle="Eu não entrego apenas um treino, te ensino você a entender o processo, ajustar sua rotina e manter a consistência sem sofrimento."
+    title="Consultoria Online sob medida"
+    subtitle="Treinos personalizados que se adaptam à sua rotina e objetivos. Planos desenvolvidos com base no seu nível atual, tempo disponível e necessidades."
     items={[
       {
-        title: 'Personalização Total',
+        title: 'Eficiência garantida',
         description:
-          'Seu treino, sua rotina, seu ritmo.',
-        icon: 'tabler:brand-tailwind',
+          'Treinos estruturados para maximizar seus resultados.',
+        icon: 'tabler:trending-up',
       },
       {
         title: 'Resultados Reais',
