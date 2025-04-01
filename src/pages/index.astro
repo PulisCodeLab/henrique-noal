@@ -4,7 +4,6 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
@@ -13,7 +12,7 @@ import Pricing from '~/components/widgets/Pricing.astro';
 import { YouTube } from 'astro-embed';
 
 const metadata = {
-  title: 'Henrique Noal — Consultoria de Treinamento Fisíco',
+  title: 'Henrique Noal | Consultoria de Treinamento Fisíco',
   ignoreTitleTemplate: true,
 };
 ---
@@ -27,11 +26,11 @@ const metadata = {
     ]}
   >
     <Fragment slot="title">
-      Transforme o Exercício em Hábito com Ciência
+      Crie o hábito de se exercitar com base na ciência
     </Fragment>
 
     <Fragment slot="subtitle">
-      Treinos personalizados, baseados na ciência, para transformar o exercício em hábito. Sem fórmulas prontas, apenas resultados reais.
+      Treinos personalizados e científicos para criar o hábito do exercício. Sem fórmulas prontas, só resultados reais.
     </Fragment>
 
     <Fragment slot="image">
@@ -65,16 +64,9 @@ const metadata = {
         icon: 'tabler:components',
       },
       {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
         title: 'Suporte Contínuo',
-        description:
-          'Ajustes e acompanhamento direto comigo.',
-        icon: 'tabler:rocket',
+        description: 'Ajustes e acompanhamento direto comigo.',
+        icon: 'tabler:brand-whatsapp',
       }
     ]}
   />
@@ -90,90 +82,17 @@ const metadata = {
     }}
     callToAction={{
       text: 'Começar agora',
+      class: 'btn-primary mt-5',
+      target: '_blank',
       href: 'https://wa.me/555599609147?text=Ol%C3%A1, Henrique%20tenho%20interesse%20na%20consultoria%20',
     }}
   >
     <Fragment slot="title">Quem sou eu?</Fragment>
     <Fragment slot="content">
-      Sou Henrique Noal, personal trainer formado pela UFSM, com mais de 10 anos de experiência ajudando pessoas a ganharem força, condicionamento e, principalmente, a criarem <strong>consistência</strong> no treino. <br> Também sou criador do SalusCast, um podcast que conecta ciência e saúde, e ofereço consultoria online para quem busca eficiência nos treinos.
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <p class="text-white mb-3">Sou Henrique Noal, personal trainer formado pela UFSM, com mais de 10 anos de experiência ajudando pessoas a ganharem força, condicionamento e, principalmente, a criarem <strong>consistência</strong> no treino.</p> 
+      <p class="text-white mb-3">Também sou criador do SalusCast, um podcast que conecta ciência e saúde, e ofereço consultoria online para quem busca eficiência nos treinos.</p>
     </Fragment>
   </Content>
-
-  <!-- Content Widget **************** -->
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
-  <Steps
-    title="O processo"
-    items={[
-      {
-        title: 'Passo 1: <span class="font-medium">Diagnóstico Inicial</span>',
-        description:
-          "Realizamos uma avaliação completa para entender seu ponto de partida e definir metas realistas.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Passo 2: <span class="font-medium">Planejamento Estratégico</span>',
-        description:
-          "Desenvolvo seu plano personalizado de treinos e nutrição com base nos seus objetivos e disponibilidade.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Passo 3: <span class="font-medium">Implementação e Acompanhamento</span>',
-        description:
-          "Iniciamos os treinos com orientação precisa e monitoramento constante de sua evolução.",
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Passo 4: <span class="font-medium">Avaliação e Ajustes</span>',
-        description:
-          "A cada 30 dias, realizamos novas medições e ajustamos o programa para maximizar seus resultados.",
-        icon: 'tabler:paint',
-      }
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
 
   <!-- Features2 Widget ************** -->
   <Features2
@@ -206,53 +125,48 @@ const metadata = {
       }
     ]}
   >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
+    <div class="flex flex-row flex-nowrap gap-4 py-6 m-auto max-w-xs sm:flex-row sm:justify-center sm:max-w-md lg:justify-center">
+      <div class="flex w-full sm:w-auto">
+        <a class="btn-primary sm:mb-0 w-full" href="https://wa.me/555599609147?text=Ol%C3%A1, Henrique%20tenho%20interesse%20na%20consultoria%20" rel="noopener noreferrer">
+          Quero começar agora
+        </a>
+      </div>
+    </div>
   </Features2>
 
   <Testimonials
-    title="O que dizem"
+    tagline="O que dizem"
+    title="Depoimentos"
     subtitle="Descubra o que meus clientes dizem sobre trabalhar comigo"
     testimonials={[
       {
         testimonial: `Sanou as dúvidas e foi muito além! Muito obrigado, sempre trazendo ótimas explicações`,
-        name: 'Mark Thompson',
-        job: 'Creative director'
+        name: '',
+        job: ''
       },
       {
-        testimonial: `She transformed our brand identity with her creative finesse, capturing our essence in every element. Her dedication and talent truly shine through her work.`,
-        name: 'Emily Martinez',
-        job: 'CEO'
+        testimonial: `Estou tentando descontruir algumas coisas que ouvi por muito tempo, para poder treinar com mais consistência! E tu tem me ajudado muito nisso com seus ensinamentos!`,
+        name: '',
+        job: ''
       },
       {
-        testimonial: `She has an uncanny ability to communicate emotions and stories. She crafted a logo for our NGO that not only represents our cause but also evokes empathy. Her professionalism and commitment make her a designer of exceptional caliber.`,
-        name: 'Laura Simmons',
-        job: 'Founder of an NGO'
+        testimonial: `Realmente, eu vejo que hoje em dia é  tudo 8 ou 80, e essa mentalidade também foi o que me quebrou em relação a academia! Obrigado pelos seus ensinamentos.`,
+        name: '',
+        job: ''
       },
       {
-        testimonial: `We entrusted Sarah with revamping our website's user interface, and the results were astounding. Her intuitive design sense enhanced user experience, leading to a significant increase in engagement. She's a designer who truly understands the synergy of aesthetics and functionality.`,
-        name: 'Alex Foster',
-        job: 'Director of web services'
-      },
-      {
-        testimonial: `She took our vision and elevated it beyond imagination. Her ability to capture brand essence and translate it into design is nothing short of remarkable. Working with her has been an inspiring journey.`,
-        name: 'Jessica Collins',
-        job: 'Product Manager'
-      },
-      {
-        testimonial: `Her ability to transform concepts into captivating visuals is nothing short of extraordinary. She took our event poster idea and turned it into a visual masterpiece that perfectly captured the essence of our festival. Sarah's dedication, creativity, and knack for delivering beyond expectations make her an invaluable asset to any project.`,
-        name: 'Michael Carter',
-        job: 'Event Coordinator'
-      },
+        testimonial: `Treinos top e deu certo nesse novo formato. Muito feliz que os treinos mais a dieta estão dando resultados e mais saúde, principalmente!`,
+        name: '',
+        job: ''
+      }
     ]}
     callToAction={{
-      text: 'Começar agora',
+      text: 'Quero treinar agora',
       href: 'https://wa.me/555599609147?text=Ol%C3%A1, Henrique%20tenho%20interesse%20na%20consultoria%20',
     }}
   />
 
-    <!-- Pricing Widget ******************* -->
+  <!-- Pricing Widget ******************* -->
   <Pricing
     title="Investimento"
     subtitle='Para garantir resultados reais, ofereço apenas planos trimestrais e semestrais.'
@@ -262,9 +176,10 @@ const metadata = {
         title: 'Plano trimestral',
         subtitle: 'Access to core features and a wide range of templates',
         price: '240,00',
-        period: 'total R$ 720,00',
+        period: 'Total de R$ 720,00',
         callToAction: {
           target: '_blank',
+          class: 'btn-primary',
           text: 'Garantir minha vaga trimestral',
           href: 'https://wa.me/555599609147?text=Ol%C3%A1, Henrique%20tenho%20interesse%20no%20plano%20trimestral%20',
         },
@@ -272,24 +187,22 @@ const metadata = {
       {
         title: 'Plano Semestral',
         subtitle: 'Premium templates and advanced customization',
-        price: '220',
-        period: '6 meses, por R$ 720,00',
+        price: '220,00',
+        period: 'Total de R$ 1.320,00',
         callToAction: {
           target: '_blank',
+          class: 'btn-primary',
           text: 'Garantir minha vaga semestral',
           href: 'https://wa.me/555599609147?text=Ol%C3%A1, Henrique%20tenho%20interesse%20no%20plano%20semestral%20',
         },
-        hasRibbon: false,
-        ribbonTitle: 'popular',
       }
     ]}
   />
 
   <!-- FAQs Widget ******************* -->
   <FAQs
-    title="Perguntas Frequentes"
-    subtitle="Pare de perder tempo com treinos que não funcionam"
-    tagline="FAQs"
+    tagline="Perguntas Frequentes"
+    title="Chega de perder tempo com treinos ineficazes"
     id="faq"
     classes={{ container: 'max-w-6xl' }}
     items={[
@@ -314,12 +227,4 @@ const metadata = {
       }
     ]}
   />
-
-  <div class="flex flex-row flex-nowrap gap-4 py-6 m-auto max-w-xs sm:flex-row sm:justify-center sm:max-w-md lg:justify-center">
-    <div class="flex w-full sm:w-auto">
-      <a class="btn-primary sm:mb-0 w-full" href="https://wa.me/555599609147?text=Ol%C3%A1, Henrique%20tenho%20interesse%20na%20consultoria%20" rel="noopener noreferrer">
-        Começar agora
-      </a>
-    </div>
-  </div>
 </Layout>
