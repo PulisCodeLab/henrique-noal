@@ -1,9 +1,9 @@
 site:
   name: Henrique Noal
-  site: 'https://astrowind.vercel.app'
+  site: 'https://henriquenoal.com.br'
   base: '/'
   trailingSlash: false
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+  googleSiteVerificationId: fsKiIr0-4TZLBoP4fQW9R9MwpPpljJ2TCiWJ62kAX-c
 
 # Default SEO metadata
 metadata:
